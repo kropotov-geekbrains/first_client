@@ -5,14 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.*;
-
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 
 @RestController
 public class ConfigClient {
 
-    @Value("{user.role}")
+    @Value("${user.role}")
     private String role;
 
     @GetMapping(

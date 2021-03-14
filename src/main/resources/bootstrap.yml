@@ -1,18 +1,3 @@
 spring:
   application:
     name: ${APP:first_client}
-  profiles:
-    active: ${PROFILE:dev}
-  config:
-    retry:
-      maxAttempts: 200
-      initialInterval: 500
-      maxInterval: 5000
-  cloud:
-    config:
-      enabled: true
-      failFast: true
-      uri: ${CONFIG_SERVER_URL}
-      label: ${CONFIG_BRANCH:master}
-      username: ${SERVER_USER:geek}
-      password: ${SERVER_PASS:geek_pass}
